@@ -1,0 +1,122 @@
+.headnav {
+display: inline-block;
+vertical-align: top;
+}
+.hnav {
+    display: inline-block;
+    vertical-align: top;
+    padding: 30px;
+    text-align: center;
+}
+.logo {
+    display: inline-block;
+}
+.langlogo {
+ display: inline-block;
+ height: 20px;
+ width: 25px;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+.menu {
+    /* background-color: blue; */
+    width: calc(100% - 300px);
+    font-size: 0;
+}
+.menu-item {
+    width: 20%;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    padding-left: 1500px;
+}
+.menu-item:hover  {
+    background-color: white
+}
+.menu-item:hover>.submenu {
+    display: block;
+}
+.submenu {
+    background-color: rgb(218, 255, 196);
+    display: none;
+    position: relative;
+    box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.5);
+}
+.submenu .menu-item {
+    width: 100%;
+    padding: 0 12px;
+    text-align: left;
+    box-sizing: border-box;
+}
+.submenu .menu-item:hover {
+    border-bottom: 2px solid rgb(155, 222, 135);
+    background-color: transparent;
+}
+.open-modal-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .open-modal-btn:hover {
+    background-color: #ffffff;
+  }
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    visibility: hidden;
+    opacity: 0;
+    z-index: -1;
+    transition: visibility 0.3s, opacity 0.3s;
+  }
+  .modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 500px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .modal-content h2 {
+    margin-top: 0;
+  }
+
+  .modal-content a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #000000;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .modal-content a:hover {
+    background-color: #fdfdfd;
+  }
+
+
+  #modal:target {
+    visibility: visible;
+    opacity: 1;
+    z-index: 1000;
+  }
